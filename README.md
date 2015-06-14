@@ -52,11 +52,11 @@ The stakeholders at the StFYC have agreed upon the following features for the in
 	3. Retrieve a PDF of a song
 	4. Secure login
 	5. CRUD on **users**
-	6. 
+	
   *Here is a sample schema with a many-to-many: performances have many songs, songs may be in many performances.
  <br>
-
     ![Sample Schema](images/schema.png)
+    
 Here is the information we’ll be storing for each of our...
 ####songs
 * song_id		
