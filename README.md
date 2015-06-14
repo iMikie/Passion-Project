@@ -104,9 +104,27 @@ Here is the information we’ll be storing for each of our...
 * updated_at
 
 
-##Wireframes
-1. login screen
-2. 
+##Routes
+Resource | CRUD        |HTTP Verb | Path     | User for 
+--------|--------------|-------|-------------|-----------
+**User**| Create       | GET   | user/signup | requesting signup for a new user
+      	| 					   | POST  | user/signup | retrieve data and create user
+      	| Read         | GET   | /           | request login or signup
+      	|              | POST  | /           | authenticate, go to home page
+      	| Update       | GET   | /user/:id/edit  | make changes in user profile
+      	|              | POST  | /user/edit
+
+User
+* Create
+		1. sign_up
+* Read
+		2. login
+		3. user_profile
+* Update
+		1. edit user_profile
+* Delete
+		1.
+3. 
 
 
 The club loaned me an intern who has around 800 pieces of sheet music scanned and we have meta data collected for about 500 of those.  
