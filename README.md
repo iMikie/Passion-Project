@@ -45,34 +45,59 @@ alt="Flashcard UI." width="560" height="315" border="10" /></a>
 
 The Web App I'd like to build to experiment with all this revolves around a sheet music database for the Men’s chorus I belong to at the St. Francis Yacht Club.  We have around 1,000 pieces of music with data on composer, lyricist, season (i.e. holiday), style, parts (i.e Tenor, Bass). We’d want to search on all those fields.  Additionally I think that storing the programs we sing gives the required many to many relation: Each song is in potentially many programs (think holiday favorites), each program contains many songs.  
 
-####Minimum Viable Product:  
+####Minimum Viable Product
+The stakeholders at the StFYC have agreed upon the following features for the initial release:
 	1. Search the database on any of the fields (or combination thereof) below.  
 	2. CRUD on **songs** (i.e. correct mistakes.) 
 	3. Retrieve a PDF of a song
 	4. Secure login
 	5. CRUD on **users**
+	6. 
+  *Here is a sample schema with a many-to-many: performances have many songs, songs may be in many performances.
+ <br>
 
+    ![Sample Schema](images/schema.png)
 Here is the information we’ll be storing for each of our...
 ####songs
-* song_id			—the folder number assigned by Herb 					
+* song_id		
+* song_number		--the physical folder where the paper copy can be found.
 * song_title
+* composer
 * larger_work		––if the song is part of a larger work: “King And I”    
 * arranger1			
 * arranger2
 * voicing
 * description
 * pdf_url				
+* created_at
+* updated_at
+
+###Users
+* name
+* username
+* email 
+* phone_number
+* password_hash
+* created_at
+* updated_at
 
 ####Performances
 * id
-* name
+* title
 * date
+* performance_time
+* call_time
 * location
+* created_at
+* updated_at
+
 
 ####Songs_Performaces
 *id
 *performance_id
 *song_id
+* created_at
+* updated_at
 
 
 ##Wireframes
