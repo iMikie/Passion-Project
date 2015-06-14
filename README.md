@@ -46,16 +46,20 @@ alt="Flashcard UI." width="560" height="315" border="10" /></a>
 The Web App I'd like to build to experiment with all this revolves around a sheet music database for the Men’s chorus I belong to at the St. Francis Yacht Club.  We have around 1,000 pieces of music with data on composer, lyricist, season (i.e. holiday), style, parts (i.e Tenor, Bass). We’d want to search on all those fields.  Additionally I think that storing the programs we sing gives the required many to many relation: Each song is in potentially many programs (think holiday favorites), each program contains many songs.  
 
 ####Minimum Viable Product
-The stakeholders at the StFYC have agreed upon the following features for the initial release:
-	1. Search the database on any of the fields (or combination thereof) below.  
-	2. CRUD on **songs** (i.e. correct mistakes.) 
-	3. Retrieve a PDF of a song
-	4. Secure login
-	5. CRUD on **users**
+I have met several times with the stakeholders at the StFYC: the music director, the president of the SOTS, and the exec staff as well as the Director of Communications, IT manager and the General Manger.  We have agreed upon the following features for the initial release: 
+<br>
+
+1. Search the database on any of the fields (or combination thereof) below.  
+2. CRUD on **songs**  
+3. Retrieve a PDF of a song
+4. Secure login
+5. CRUD on **users**
+	 
+Relating performances to songs is more a factor of my need to deal with a many-to-many relationship so it is not in release 1.
 	
-  *Here is a sample schema with a many-to-many: performances have many songs, songs may be in many performances.
+  *Here is the initial schema. Users is an independant table.  Performances and Songs have a many to many relationship.  This is captured in the performances_songs table.
  <br>
-    ![Sample Schema](images/schema.png)
+###![Schema](schema.png)
     
 Here is the information we’ll be storing for each of our...
 ####songs
