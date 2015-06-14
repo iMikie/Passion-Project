@@ -1,4 +1,4 @@
-class CreatePerformances-songs < ActiveRecord::Migration
+class CreatePerformancesSongs < ActiveRecord::Migration
   def change
     create_table :performances_songs do |t|
       t.integer  :performance_id
