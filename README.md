@@ -76,6 +76,18 @@ Here is the information we’ll be storing for each of our...
 * created_at
 * updated_at
 
+The client has clarified that the description field is really a category.  Below are the currently enumerated values but I expect they shall grow.  National anthems may be the next as the club hosts teams from all over the world.  Rather than use a db enumeration I'll probably enforce this set by using a pop down menu.
+* Christmas
+* Broadway
+* Sea Chanty
+* Spiritual
+* Sacred
+* Patriotic
+* FolkSong
+* Original
+* Other
+* 
+
 ###Users
 * name
 * username
