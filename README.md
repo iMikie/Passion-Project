@@ -155,39 +155,3 @@ User
 
 
 The club loaned me an intern who has around 800 pieces of sheet music scanned and we have meta data collected for about 500 of those.  
-
-More screen designs to come.
-
-###People
-* id
-* name
-* password
-* email
-* phone
-* status
-
-###Songs
-* Composer
-* Lyricist
-* Publisher
-* Title
-* Parts
-* URLs of scanned sheet music PDF
-* URLs to recordings
-
-###Events
-* id
-* description
-* location
-* call time
-* performance time
-* contact_id
-
-
-###Officials
-* Title
-* person_id
-* term
-
-
-
