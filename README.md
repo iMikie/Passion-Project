@@ -121,21 +121,22 @@ The client has clarified that the description field is really a category.   A so
 ##Routes
 Resource | CRUD        |HTTP Verb | Path     | User for 
 --------|--------------|-------|-------------|-----------
-**Users**| Create      | GET   | user/signup | requesting signup for a new user
-      	| 	       | POST  | user/signup | create user
-      	| Read         | GET   | /           | request login or signup
+**Users**| Create      | GET   | users/signup | requesting signup for a new user
+      	| 	       | POST  | users/signup | create user
+      	| Read         | GET   | /           | go to login
+      	|              | GET  | /users/login | get user login info
       	|              | POST  | /           | authenticate, go to home page
-      	| Update       | GET   | /user/edit  | make changes in user profile
-      	|              | POST  | /user/edit  | receive and save changes
+      	| Update       | GET   | /users/edit  | make changes in user profile
+      	|              | POST  | /users/edit  | receive and save changes
       	| Delete       | DELETE| /user/delete| delete the currently logged in user's account
 **Songs** | Create     | GET   | songs/create | put up form to create a new song in the db
-       	| 	       | POST  | song/create | create song record
-      	| Read         | GET   | /song/search   | request search page
-      	|              | POST  | /song/search   | search on params, return matching songs
-      	|	       | GET | /song/show/:id | display the PDF of the song, somehow
-      	| Update       | GET   | /song/edit  | request to make changes in a song
-      	|              | POST  | /song/edit  | receive and save changes
-      	| Delete       | DELETE| /song/delete| delete the currently logged in user's account
+       	| 	       | POST  | songs/create | create song record
+      	| Read         | GET   | /songs/search   | request search page
+      	|              | POST  | /songs/search   | search on params, return matching songs
+      	|	       | GET | /songs/show/:id | display the PDF of the song, somehow
+      	| Update       | GET   | /songs/edit  | request to make changes in a song
+      	|              | POST  | /songs/edit  | receive and save changes
+      	| Delete       | DELETE| /songs/delete| delete the currently logged in user's account
 
 	
 
