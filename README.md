@@ -136,8 +136,7 @@ Resource | CRUD        |HTTP Verb | Path     | User for
       	| Update       | GET   | /song/edit  | request to make changes in a song
       	|              | POST  | /song/edit  | receive and save changes
       	| Delete       | DELETE| /song/delete| delete the currently logged in user's account
-    --------|-----------|---------|------------|--------------------
-   	
+
 	
 
 User
