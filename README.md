@@ -126,6 +126,7 @@ Resource | CRUD        |HTTP Verb | Path     | User for
       	| Read         | GET   | /           | go to login
       	|              | GET  | /users/login | get user login info
       	|              | POST  | /           | authenticate, go to home page
+      	|              | GET   | /users/show | display user's information
       	| Update       | GET   | /users/edit  | make changes in user profile
       	|              | POST  | /users/edit  | receive and save changes
       	| Delete       | DELETE| /user/delete| delete the currently logged in user's account
