@@ -17,7 +17,38 @@
 
   <title></title>
 </head>
+
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/songs/search">Music</a>
+      <ul>
+        <li><a href="#">Search</a></li>
+        <li><a href="#">Add a song</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Performances</a>
+      <ul>
+        <li><a href="#">View Past Performances</a></li>
+        <li><a href="#">Create New Performance</a></li>
+      </ul>
+    <li><a href="#">SOTS</a>
+      <ul>
+        <li><a href="#">Meet the SOTS</a></li>
+        <li><a href="/users/profile">Profile</a></li>
+        <li><a href="/users/edit">Edit Profile</a></li>
+        <li><a href="/users/signup">Sign Up</a></li>
+      </ul>
+    </li>
+    <%  if session[:user_id] %>
+        <li><a href="/users/logout">logout</a></li>
+    <% else %>
+        <li><a href="/users/login">login</a></li>
+    <% end %>
+  </ul>
+</nav>
+
 <body>
-  <%= yield %>
+<%= yield %>
 </body>
 </html>

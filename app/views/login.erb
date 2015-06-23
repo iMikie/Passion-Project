@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Sons of the Sea</h1>
+  <% if @error %>
+      <p class="error"><%= @error %></p>
+  <% end %>
+  <form action="/users/login" method="post">
+    <input type="text" placeholder="Username" name="username">
+    <input type="password" placeholder="Password" name="password">
+    <input type="submit" value="Login">
+  </form>
+  <a href="/users/signup">Sign up</a>
+</div>
