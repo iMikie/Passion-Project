@@ -42,7 +42,8 @@ That's all well and good, but how far can this go? In the next video I replace t
 alt="Flashcard UI." width="560" height="315" border="10" /></a>
 
 ##The Application
-
+![logo](https://www.stfyc.com/images/Redesign/logo.png)
+![Stfyc](https://www.stfyc.com/images/dynamic/getImage.gif?ID=100001798&maxwidth=1100)
 The Web App I'd like to build to experiment with all this revolves around a sheet music database for the Men’s chorus I belong to at the St. Francis Yacht Club.  We have around 1,000 pieces of music with data on composer, lyricist, season (i.e. holiday), style, parts (i.e Tenor, Bass). We’d want to search on all those fields.  Additionally I think that storing the programs we sing gives the required many to many relation: Each song is in potentially many programs (think holiday favorites), each program contains many songs.  
 
 ####Minimum Viable Product
