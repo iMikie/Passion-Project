@@ -1,4 +1,8 @@
 enable :sessions
+get '/pdftest' do
+    erb :pdf
+
+end
 
 get '/songs/new' do
 
@@ -7,6 +11,7 @@ end
 get '/songs/:id' do
   redirect  '/songs/search'
 end
+
 post '/songs'do
 
 end
@@ -20,12 +25,13 @@ put '/users/:id/' do
 end
 
 #songs/search might be songs
-get '/songs/search' do
+get '/songs' do
   if !session[:user_id]
     @error = "You must be logged in to search for music."
     redirect to '/users/login'
   else
     @songs = Song.all
+    p @songs
     erb :song_search
   end
 end
@@ -38,9 +44,6 @@ post '/songs/search' do
   arranger_two = params[:arranger_two]
   voicing = params[:voicing]
   description = params[:description]
-  puts "*" * 50
-  puts "*" * 50
-  puts params
   options_string = ""
   options_params = []
   params.each do |key, value|
@@ -57,6 +60,7 @@ post '/songs/search' do
   @songs = Song.where(options_string, *options_params)
   #Song.where("title like ? and description like ?", titleval, descval).to_sql
   #@songs = Song.where("title like ?" , '%Noel%')
+ @songs.each do |song| puts song.inspect end
 
     erb :song_search
 end

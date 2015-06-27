@@ -16,17 +16,15 @@ class Control
     end
 
     options.each do |property, value|
-      puts "sending: #{(property.to_s + '=').to_sym} , #{value}"
+      #puts "sending: #{(property.to_s + '=').to_sym} , #{value}"
       send((property.to_s + '=').to_sym, value)
     end
-    RemoteView.send_string("set the lockscreen to true")
-    error = RemoteView.receive_string
   end
 
   def remote_create(object, name)
     RemoteView.send_string("create #{object} " + '"' + name +'"')
     @id = RemoteView.receive_string
-    puts "create  #{object} " + '"' + name +'"'
+    #puts "create  #{object} " + '"' + name +'"'
   end
 
   def set_prop(prop, value)
@@ -100,9 +98,10 @@ class Control
     set_prop("textColor", '"' + value + '"')
   end
 
-  def callBack=(script)
+  def setCallback=(script)
     @callBack = script
-    set_prop("callBack", '"' + script + '"')
+    set_prop("script", script )
+    puts script
   end
 
   def delete
@@ -171,7 +170,7 @@ end
 class App
   def initialize
     begin
-      `open -a MacOS_UIServer.app`
+     `open -a MacOS_UIServer.app`
       sleep(1.0)
       RemoteView.open_connection("localhost", 5555)
     rescue SocketError => e
@@ -200,3 +199,8 @@ end
 #   RemoteView.send_string 'sendMessage  myArray '
 #   @properties = RemoteView.receive_string
 # end
+class Song
+  def self.first
+    '"African Noel" & tab & "Johnson" & tab & tab & "Christmas" & tab & return'
+  end
+end

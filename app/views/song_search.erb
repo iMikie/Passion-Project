@@ -1,34 +1,34 @@
 <div class="container">
-  <h1>Song Search</h1>
+  <div class="song_search">Song Search
 
-
-  <form action="/songs/search" method="post">
-    <input class="title" type="text" placeholder="Title" name="title">
-    <input class="composer" type="text" placeholder="Composer" name="composer">
-    <input class="voicing" type="text" placeholder="Voicing" name="voicing">
-    <input class="description" type="text" placeholder="Category" name="description">
-    <input class="larger_work" type="text" placeholder="Larger Work" name="larger_work">
-    <input class="arranger_one" type="text" placeholder="1st Arranger" name="arranger_one">
-    <input class="arranger_two" type="text" placeholder="2nd Arranger" name="arranger_two">
-    <input type="submit" value="Search">
-  </form>
-  <hr>
+    <form action="/songs/search" method="post">
+      <br>
+      <input id="title2" type="text" placeholder="Title" name="title" >
+      <input class="composer" type="text" placeholder="Composer" name="composer" >
+      <input class="voicing" type="text" placeholder="Voice" name="voicing" >
+      <input class="description" type="text" placeholder="Category" name="description" >
+      <input class="larger_work" type="text" placeholder="Larger Work" name="larger_work" >
+      <input class="arranger_one" type="text" placeholder="1st Arranger" name="arranger_one" >
+      <input class="arranger_two" type="text" placeholder="2nd Arranger" name="arranger_two" >
+      <input type="submit" value="Search" class='abut abut2'>
+    </form>
+  </div>
 
   <table class='song_table'>
     <tr class="song-heading">
-      <th>Title</th>
-      <th>Composer</th>
-      <th>Voicing</th>
-      <th>Category</th>
-      <th>Larger Work</th>
-      <th>Arranger1</th>
-      <th>Arranger2</th>
-      <th>PDF</th>
+      <!--<th class="title">Title</th>-->
+      <!--<th  class="composer">Composer</th>-->
+      <!--<th class="voicing"  >Voicing</th>-->
+      <!--<th  class="description">Category</th>-->
+      <!--<th class="larger_work" >Larger Work</th>-->
+      <!--<th  class="arranger_one" >Arranger1</th>-->
+      <!--<th  class="arranger_two">Arranger2</th>-->
+      <!--<th  >PDF</th>-->
     </tr>
 
 
     <% @songs.each do |song| %>
-        <%= erb :'partials/song', :layout => false, :locals => {:title => song.title, :composer => song.composer, :larger_work => song.larger_work, :voicing => song.voicing, :description => song.description, :arranger_one => song.arranger_one, :arranger_two => song.arranger_two, :pdf_url => song.pdf_url} %>
+      <%= erb :'partials/song', :layout => false, :locals => {:title => song.title, :composer => song.composer, :larger_work => song.larger_work, :voicing => song.voicing, :description => song.description, :larger_work=> song.larger_work, :arranger_one => song.arranger_one, :arranger_two => song.arranger_two, :pdf_url => song.song_number} %>
     <% end %>
 
 

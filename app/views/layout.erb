@@ -17,13 +17,17 @@
 
   <title></title>
 </head>
-
+<div>
+  <img src="https://www.stfyc.com/images/Redesign/logo.png" class="center-logo">
+  <img src="/img/stfyc-night.jpg">
+</div>
 <nav>
+  <div id="menu_spacer">
+  </div>
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/songs/search">Music</a>
+    <li><a href="#">Music</a>
       <ul>
-        <li><a href="#">Search</a></li>
+        <li><a href="/songs">Search</a></li>
         <li><a href="#">Add a song</a></li>
       </ul>
     </li>
@@ -35,18 +39,19 @@
     <li><a href="#">SOTS</a>
       <ul>
         <li><a href="#">Meet the SOTS</a></li>
-        <li><a href="/users/profile">Profile</a></li>
         <li><a href="/users/edit">Edit Profile</a></li>
-        <li><a href="/users/signup">Sign Up</a></li>
+        <li><a href="/logout">logout</a></li>
       </ul>
-    </li>
-    <%  if session[:user_id] %>
-        <li><a href="/users/logout">logout</a></li>
+      <% if session[:user_id] %>
+      <li><a href="/logout">Logout</a></li>
     <% else %>
-        <li><a href="/users/login">login</a></li>
+      <li><a href="/login">Login</a></li>
     <% end %>
+    <li><a href="/users/new">Signup</a></li>
   </ul>
 </nav>
+</div>
+
 
 <body>
 <%= yield %>

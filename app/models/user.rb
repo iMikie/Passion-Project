@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates :email, :presence => true, :uniqueness => true
   validates :phone_number, :presence => true
   validates :password, :presence => true
+  validates :password, length: { minimum: 6 }
 
   def password
     @password ||= Password.new(password_hash)

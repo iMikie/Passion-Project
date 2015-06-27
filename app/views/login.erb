@@ -1,12 +1,15 @@
-<div class="container">
-  <h1>Sons of the Sea</h1>
-  <% if @error %>
+<div class="center-container">
+  <div class="input_box">
+    <% if @error %>
       <p class="error"><%= @error %></p>
-  <% end %>
-  <form action="/users/login" method="post">
-    <input type="text" placeholder="Username" name="username">
-    <input type="password" placeholder="Password" name="password">
-    <input type="submit" value="Login">
-  </form>
-  <a href="/users/signup">Sign up</a>
+    <% end %>
+
+    <div class="dbox_title">Member Login </div>
+    <form action="/login" method="post">
+      <input type="text" placeholder="Username" name="username" class='login_field'>
+      <input type="password" placeholder="Password" name="password" class='login_field'>
+      <input type="submit" value="Login" class='abut'>
+    </form>
+    <a href="/users/new">Sign up</a>
+  </div>
 </div>
