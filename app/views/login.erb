@@ -1,0 +1,15 @@
+<div class="center-container">
+  <div class="input_box">
+    <% if @error %>
+      <p class="error"><%= @error %></p>
+    <% end %>
+
+    <div class="dbox_title">Member Login </div>
+    <form action="/login" method="post">
+      <input type="text" placeholder="Username" name="username" class='login_field'>
+      <input type="password" placeholder="Password" name="password" class='login_field'>
+      <input type="submit" value="Login" class='abut'>
+    </form>
+    <a href="/users/new">Sign up</a>
+  </div>
+</div>

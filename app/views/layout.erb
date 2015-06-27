@@ -17,7 +17,43 @@
 
   <title></title>
 </head>
+<div>
+  <img src="https://www.stfyc.com/images/Redesign/logo.png" class="center-logo">
+  <img src="/img/stfyc-night.jpg">
+</div>
+<nav>
+  <div id="menu_spacer">
+  </div>
+  <ul>
+    <li><a href="#">Music</a>
+      <ul>
+        <li><a href="/songs">Search</a></li>
+        <li><a href="#">Add a song</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Performances</a>
+      <ul>
+        <li><a href="#">View Past Performances</a></li>
+        <li><a href="#">Create New Performance</a></li>
+      </ul>
+    <li><a href="#">SOTS</a>
+      <ul>
+        <li><a href="#">Meet the SOTS</a></li>
+        <li><a href="/users/edit">Edit Profile</a></li>
+        <li><a href="/logout">logout</a></li>
+      </ul>
+      <% if session[:user_id] %>
+      <li><a href="/logout">Logout</a></li>
+    <% else %>
+      <li><a href="/login">Login</a></li>
+    <% end %>
+    <li><a href="/users/new">Signup</a></li>
+  </ul>
+</nav>
+</div>
+
+
 <body>
-  <%= yield %>
+<%= yield %>
 </body>
 </html>

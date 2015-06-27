@@ -16,6 +16,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0)
     backports (3.6.4)
+    bcrypt (3.1.10)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -23,6 +24,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chilkat (9.5.0.51)
     diff-lcs (1.2.5)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -82,16 +84,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (~> 4.1)
-  activesupport (~> 4.1)
+  activerecord (~> 4.2.0)
+  activesupport (~> 4.2.0)
+  bcrypt
   capybara
+  chilkat
   factory_girl
   faker
   pg
   rack-test
   rake
-  rspec
+  rspec (~> 3.0)
   shotgun
   shoulda-matchers
   sinatra
   sinatra-contrib
+
+BUNDLED WITH
+   1.10.3
